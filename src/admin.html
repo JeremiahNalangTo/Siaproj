@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main style="max-width:1100px;margin:24px auto;padding:0 16px;">
+        <h1>Profile Manager</h1>
+        <section>
+            <h2>User Management</h2>
+            <button id="addUserBtn" class="btn">Add User</button>
+            <table id="userTable" class="table" style="margin-top:12px;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section style="margin-top:18px">
+            <h2>Settings</h2>
+            <form id="settingsForm">
+                <label for="siteName">Site Name:</label>
+                <input type="text" id="siteName" name="siteName" required>
+                <div style="margin-top:8px"><button type="submit" class="btn">Save Settings</button></div>
+            </form>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script>
+      // load shared header/footer components
+      fetch('components/header.html').then(r => r.text()).then(t => document.getElementById('header-placeholder').innerHTML = t);
+      fetch('components/footer.html').then(r => r.text()).then(t => document.getElementById('footer-placeholder').innerHTML = t);
+    </script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
