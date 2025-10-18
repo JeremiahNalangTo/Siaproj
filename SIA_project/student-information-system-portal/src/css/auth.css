@@ -1,0 +1,160 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4cae4c;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Replaced conflicting rules and ensured .auth-panel is visible.
+   Overwrite this file, save and reload login/register pages. */
+
+:root{
+  --blue:#1565C0;
+  --yellow:#FFD54F;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --panel:#ffffff;
+  --card:#fcfeff;
+  --footer:#1f2937;
+  --text-dark:#0b2540;
+  --radius:10px;
+}
+
+/* Reset */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;background:var(--bg);color:var(--text-dark)}
+
+/* Page wrapper for auth screens */
+body.login-page{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:24px;
+  background:linear-gradient(90deg,var(--yellow) 30%, var(--blue) 70%);
+}
+
+/* Outer layout: contains left panel and right hero */
+.layout{
+  width:100%;
+  max-width:1100px;
+  display:flex;
+  gap:0;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 12px 40px rgba(2,6,23,0.12);
+  align-items:stretch;
+  min-height:520px; /* ensures panel is visible */
+  background:transparent;
+}
+
+/* Left auth panel */
+.auth-panel{
+  flex: 0 0 420px;
+  min-width:320px;
+  background:var(--panel);
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  border-right:1px solid rgba(11,26,44,0.04);
+  z-index:3;
+  box-shadow: 0 8px 30px rgba(11,26,44,0.06);
+}
+
+/* Branding */
+.brand{display:flex;gap:12px;align-items:center}
+.brand img{height:56px;width:auto;display:block}
+.brand h1{margin:0;font-size:20px}
+.brand p{margin:0;font-size:12px;color:var(--muted)}
+
+/* Card */
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+
+/* Form controls */
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e9eef5;margin-bottom:12px;font-size:14px;background:#fff;color:#0b2540}
+
+/* Actions and buttons */
+.actions{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:6px}
+.btn{background:var(--blue);color:#fff;border:none;padding:10px 16px;border-radius:8px;cursor:pointer;font-weight:700;text-decoration:none;display:inline-block}
+.btn.secondary{background:transparent;color:var(--blue);border:1px solid rgba(21,101,192,0.12);font-weight:700}
+.btn.outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.18);padding:10px 18px;border-radius:8px}
+
+/* Right hero */
+.hero{flex:1;position:relative;display:flex;align-items:center;justify-content:center;color:#fff;min-height:360px}
+.hero .bg{position:absolute;inset:0;background-image:url('../assets/images/bg-login.jpg');background-size:cover;background-position:center;filter:brightness(.55) saturate(.95)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(21,101,192,0.7), rgba(0,47,108,0.6));pointer-events:none}
+.hero-content{position:relative;z-index:2;padding:32px;text-align:center;max-width:520px}
+.hero h2{margin:0 0 12px;font-size:30px;font-weight:700}
+.hero p{margin:0;color:rgba(255,255,255,0.92);font-size:15px}
+
+/* Footer (dark gray) */
+footer.site-footer{
+  width:100%;
+  background:var(--footer);
+  color:#ffffff;
+  text-align:center;
+  padding:14px 0;
+  font-size:13px;
+  flex-shrink:0;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  body.login-page{padding:16px}
+  .layout{flex-direction:column;height:auto;min-height:unset}
+  .auth-panel{width:100%;flex:0 0 auto;border-right:none;border-bottom:1px solid rgba(11,26,44,0.04)}
+  .hero{min-height:220px}
+  .hero-content{padding:18px}
+}

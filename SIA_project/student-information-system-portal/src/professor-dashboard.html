@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BSTA — Professor Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <img src="assets/images/logo.png" alt="logo" class="top-logo">
+        <nav>
+        <button id="logoutBtn" class="btn secondary" style="font: size 2rem; text-decoration: none; color: #fff;" >Logout</button>
+        </nav>
+    </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#" data-view="profile">Profile</a></li>
+        <li><a href="#" data-view="classes">My Classes</a></li>
+        <li><a href="#" data-view="requests">Enroll Requests</a></li>
+        <li><a href="#" data-view="assessments">Quizzes & Activities</a></li>
+      </ul>
+    </aside>
+
+    <section class="panel" id="panel">
+      <!-- content injected by js -->
+    </section>
+  </main>
+</body>
+</html>

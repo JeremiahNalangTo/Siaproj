@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BSTA — Register</title>
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="js/auth.js" defer></script>
+</head>
+<body class="login-page">
+  <main class="layout">
+    <aside class="auth-panel">
+      <div class="brand">
+        <img src="assets/images/logo.png" alt="BSTA logo">
+        <div>
+          <h1>BSTA</h1>
+          <p>Register</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <form id="registerForm">
+          <label for="roleSelect">Account type</label>
+          <select id="roleSelect" required>
+            <option value="student">Student</option>
+            <option value="professor">Professor</option>
+          </select>
+
+          <label for="surname">Surname</label>
+          <input id="surname" required>
+
+          <label for="givenName">Given name</label>
+          <input id="givenName" required>
+
+          <label for="middleInitial">Middle initial</label>
+          <input id="middleInitial" placeholder="Optional">
+
+          <label for="email">Email</label>
+          <input id="email" type="email" required>
+
+          <label for="contact">Contact number</label>
+          <input id="contact" required>
+
+          <label for="usernameR">Username</label>
+          <input id="usernameR" required>
+
+          <label for="passwordR">Password</label>
+          <input id="passwordR" type="password" required>
+
+          <div class="actions">
+            <button class="btn" type="submit">Create account</button>
+            <a class="btn secondary" href="login.html">Back to login</a>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    <section class="hero">
+      <div class="bg"></div>
+      <div class="hero-content">
+        <h2>Create an account</h2>
+        <p>Register as Student or Professor. After creating an account, login to access the correct dashboard.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

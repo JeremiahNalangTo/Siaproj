@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "grade": "10",
+        "enrollmentDate": "2022-08-15"
+    },
+    {
+        "id": 2,
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "jane.smith@example.com",
+        "grade": "11",
+        "enrollmentDate": "2021-08-15"
+    },
+    {
+        "id": 3,
+        "firstName": "Emily",
+        "lastName": "Johnson",
+        "email": "emily.johnson@example.com",
+        "grade": "12",
+        "enrollmentDate": "2020-08-15"
+    },
+    {
+        "id": 4,
+        "firstName": "Michael",
+        "lastName": "Brown",
+        "email": "michael.brown@example.com",
+        "grade": "10",
+        "enrollmentDate": "2022-08-15"
+    },
+    {
+        "id": 5,
+        "firstName": "Sarah",
+        "lastName": "Davis",
+        "email": "sarah.davis@example.com",
+        "grade": "11",
+        "enrollmentDate": "2021-08-15"
+    }
+]
